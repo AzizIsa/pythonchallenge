@@ -1,0 +1,699 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Variables & Simple Data types"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***Variables***"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "message = \"Hello Python World!\"\n",
+    "print(message)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "message = \"Hello Python World!\"\n",
+    "message= \" Hello Python Crash course world!\"\n",
+    "print(message)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Naming Using Variables possible variable names\n",
+    "message_1 = \"hi\"\n",
+    "mEssage_1 = \"hi\"\n",
+    "greeting_message = \"hi\"\n",
+    "first_name = \"john\"\n",
+    "last_name = \"jackson\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Avoid Name Errors\n",
+    "message = \"Hello Python World!\"\n",
+    "print(message)\n",
+    "# ERROR description below: 1) Output 2) spot of the error 3) kind of the error"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "metadata": {},
+   "source": [
+    "***Strings***"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#String in quotes single/double:\n",
+    "\"This is a string\"\n",
+    "'this is also string!'\n",
+    "\n",
+    "#Changing Case in String \n",
+    "name = \"ada lovelace\"\n",
+    "print(name.title())\n",
+    "print(name.upper())\n",
+    "print(name.lower())\n",
+    "\n",
+    "#Combining or Concatinating\n",
+    "first_name = \"ada\"\n",
+    "last_name = \"lovelace\"\n",
+    "full_name =  first_name + \" \" + last_name\n",
+    "print(\"Fullname: \" + \" \" +full_name)\n",
+    "print( \"Hello, \" + full_name.title() + \"!\")\n",
+    "\n",
+    "#Adding WhiteSpace to strings with tabs or newlines\n",
+    "print(\"Python\") # simple text\n",
+    "print(\"\\tPython\") # adding tab\n",
+    "print(\"Languages:\\nPython\\nC\\nJavascript\") # printing each text in a new line\n",
+    "print(\"Languages:\\n\\tPython\\n\\tC\\n\\tJavascript\") # printing with tab and new line\n",
+    "\n",
+    "#Stripping white space #rstrip()\n",
+    "favourite_language1 = \"python right          \"\n",
+    "\n",
+    "print(favourite_language1)\n",
+    "print(favourite_language1.rstrip()) # eleminates extra space(right)in a string\n",
+    "\n",
+    "favourite_language2 = \"          python left\"\n",
+    "print(favourite_language2.lstrip())# eleminates extra space(left)in a string\n",
+    "\n",
+    "favourite_language3 = \"          python both          \"\n",
+    "print(favourite_language3.strip())\n",
+    "\n",
+    "#Avoiding Syntax Errors confusion with double quotes/and single quotes\n",
+    "message = \"One of Python's strength is its divers community.\" # best one\n",
+    "print(message)\n",
+    "\n",
+    "#message = 'One of Python's strength is its divers community.' here is the error"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***Numbers***"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Integers canbe used with arithmetics\n",
+    "2+3\n",
+    "3-2\n",
+    "2*3\n",
+    "3/2\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Floats \n",
+    "0.1 +0.2\n",
+    "0.2 * 2\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Avoiding Type Errors with the str() Function\n",
+    "age = 23\n",
+    "message = \"happy\" + str(age) +\"rd Brithday!\"\n",
+    "print(message)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***Comments***"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# the main reason to write comments is to explane what your code is supposed to do and how you are making it work\n",
+    "#Coloborate with other developers in a team\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***Zen of Python***"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Beautiful is better than ugly\n",
+    "# Simple is better than complex\n",
+    "# Complex is better than complicated\n",
+    "# Readibility counts\n",
+    "# there should be one -- and preferable only one -- obvious way to do it\n",
+    "# Now is better thean never."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Introducing Lists"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***What is list? ***"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "bicycles = ['trek', 'cannondale','redline', 'specialized']\n",
+    "print(bicycles)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Accesing Elements in a list\n",
+    "print(bicycles[0])\n",
+    "print(bicycles[0].title())\n",
+    "var=[x.title() for x in bicycles] # to do title for all values\n",
+    "print(var)\n",
+    "\n",
+    "# Index positions Start at 0 Not 1\n",
+    "print(bicycles[1])\n",
+    "\n",
+    "print(bicycles[3]) # last value\n",
+    "print(bicycles[-1]) # last value\n",
+    "\n",
+    "# Using individual values from a list\n",
+    "message = \"My first bicycles was a <\" + bicycles[0].title() + \">.\"\n",
+    "print(message)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "****Changing , Adding and Removing Elements***"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Modifying elements in alist\n",
+    "motorcycles = ['honda', 'yamaha', 'suzuku']\n",
+    "print(motorcycles)\n",
+    "motorcycles[0] = 'ducati'\n",
+    "print(motorcycles)\n",
+    "\n",
+    "# Adding Elements to a list\n",
+    "motorcycles.append('bmw')\n",
+    "print(motorcycles)\n",
+    "\n",
+    "motorbikes=[]\n",
+    "motorbikes.append('mercedes')\n",
+    "motorbikes.append('bugatti')\n",
+    "motorbikes.append('volvo')\n",
+    "print(motorbikes)\n",
+    "# Inserting elements in to alist with the defined index number\n",
+    "motorbikes = ['mercedes', 'bugatti', 'volvo']\n",
+    "motorbikes.insert(0, 'toyota') # inserting to a defined index number\n",
+    "print(motorbikes)\n",
+    "\n",
+    "# Removing Elements from a list\n",
+    "motorbikes = ['toyota', 'mercedes', 'bugatti', 'volvo']\n",
+    "del motorbikes[0] # u can remove lists based on the index\n",
+    "print(motorbikes)\n",
+    "\n",
+    "motorbikes = ['toyota', 'mercedes', 'bugatti', 'volvo']\n",
+    "popped_mbikes = motorbikes.pop() # pop removes the last value in a list\n",
+    "print(motorbikes) # removed volvo from the list\n",
+    "print(popped_mbikes) # to see the removed item\n",
+    "\n",
+    "# Pop remove with index any value in a list\n",
+    "motorbikes = ['toyota', 'mercedes', 'bugatti', 'volvo']\n",
+    "first_owned = motorbikes.pop(0) # index is here\n",
+    "print( \"the first motorbike I owned was a \"  +first_owned.title() + \".\\n\")\n",
+    "\n",
+    "# Removing an Item by Value.\n",
+    "motorbikes = ['toyota', 'mercedes', 'bugatti', 'volvo']\n",
+    "print(motorbikes)\n",
+    "motorbikes.remove('bugatti')\n",
+    "print(motorbikes)\n",
+    "\n",
+    "\n",
+    "motorbikes = ['toyota', 'mercedes', 'bugatti', 'volvo']\n",
+    "too_expensive = 'bugatti'\n",
+    "motorbikes.remove(too_expensive)\n",
+    "print(motorbikes)\n",
+    "print( \"\\nA \" + too_expensive.title() + \" is expensive for me.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***Orginizing a list***"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Sorting a List permemently with the sort() method\n",
+    "cars= ['bmw', 'audi', 'toyota', 'subaru']\n",
+    "cars.sort() #ascending order\n",
+    "print(cars)\n",
+    "\n",
+    "cars= ['bmw', 'audi', 'toyota', 'subaru']\n",
+    "cars.sort(reverse=True) # decending order\n",
+    "print(cars)\n",
+    "\n",
+    "# Sorting a list Temporary with the sorted() function\n",
+    "print(\"-------------------------------------\")\n",
+    "cars= ['bmw', 'audi', 'toyota', 'subaru']\n",
+    "print(\"Here is the original list: \")\n",
+    "print(cars)\n",
+    "print(\"Here is the sorted list:\")\n",
+    "print(sorted(cars)) # temporary sorted\n",
+    "print('Here is the original list again:')\n",
+    "print(cars)\n",
+    "print(\"-------------------------------------\")\n",
+    "# Printing a list in Reverse Order\n",
+    "print(\"-------------------------------------\")\n",
+    "cars= ['bmw', 'audi', 'toyota', 'subaru']\n",
+    "print(cars)\n",
+    "cars.reverse()\n",
+    "print(cars)\n",
+    "print(\"-------------------------------------\")\n",
+    "# Finding the lenth of a list\n",
+    "len(cars)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***Avoiding Index Errors. When working with lists***"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "motorbikes = ['toyota', 'mercedes', 'bugatti', 'volvo']\n",
+    "print(motorbikes[5]) # Error \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(motorbikes[-1]) # better than prediciting the last value"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "motorbikes=[]\n",
+    "print(motorbikes[-1]) #Error because list is empty"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 4 Working with Lists"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***Looping Through Entire list***"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# A closer look at LOOPING\n",
+    "magicians = ['alice', 'david', 'carolina']\n",
+    "for x in magicians:\n",
+    "    print(x)\n",
+    "    \n",
+    "    \n",
+    "print(\"-------------------------------\") # doing smth after loop, indentation should be avoided.\n",
+    "# Doing More Working Within a for Loop\n",
+    "magicians = ['alice', 'david', 'carolina']\n",
+    "\n",
+    "for x in magicians:\n",
+    "    print(x.title() + \", that was great trick!\")\n",
+    "    \n",
+    "    \n",
+    "    \n",
+    "print(\"-------------------------------\")    \n",
+    "# Doing something After a for Loop\n",
+    "\n",
+    "magicians = ['alice', 'david', 'carolina']\n",
+    "\n",
+    "for x in magicians:\n",
+    "    print(x.title() + \", that was great trick!\")\n",
+    "    print(\"I cant wait to see your next tric, \" + x.title() + \".\\n\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Avoiding Indentation Errors**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Forgetting to Indent\n",
+    "magicians = ['alice', 'david', 'carolina']\n",
+    "for x in magicians:\n",
+    "print(x) #Error "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Indenting Unnecessarily will cause error \n",
+    "message = \"hellow\"\n",
+    "    print(message)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Indenting Unecessarily after the Loop\n",
+    "magicians = ['alice', 'david', 'carolina']\n",
+    "\n",
+    "for x in magicians:\n",
+    "    print(x.title() + \", that was great trick!\")\n",
+    "    print(\"I cant wait to see your next tric, \" + x.title() + \".\\n\")\n",
+    "    \n",
+    "    print(\"Thank you all\") # Indentation should be avoided ( footer message)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Forgeting the Colon will result in error\n",
+    "magicians = ['alice', 'david', 'carolina']\n",
+    "for x in magicians # here\n",
+    "    print(x)\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Making Numerical Lists**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "##Using the range() Function\n",
+    "for x in range(1, 5):\n",
+    "    print(x)\n",
+    "print(\"--------------------\")\n",
+    "\n",
+    "for y in range(1,6):\n",
+    "    print(y)\n",
+    "print(\"--------------------\")\n",
+    "\n",
+    "\n",
+    "\n",
+    "#Using range() to Make a list of Numbers\n",
+    "numbers = list(range(1,6))\n",
+    "print(numbers)\n",
+    "\n",
+    "squares = []\n",
+    "\n",
+    "for value in range(1,11):\n",
+    "    square = value**2\n",
+    "    squares.append(square)\n",
+    "print(squares)\n",
+    "# Alternative Way\n",
+    "squares=[]\n",
+    "for value in range(1,11):\n",
+    "    squares.append(value**2)\n",
+    "print(squares)\n",
+    "print(\"--------------------\")\n",
+    "\n",
+    "\n",
+    "#Simple Statistics with a List of Numbers\n",
+    "digits=[1,2,3,4,5,6,7,8,9,0]\n",
+    "print(min(digits))\n",
+    "print(max(digits))\n",
+    "print(sum(digits))\n",
+    "print(\"--------------------\")\n",
+    "\n",
+    "#List Comprehentions( best way of looping with append)\n",
+    "squares = [value**2 for value in range(1,11)]\n",
+    "print(squares)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Working with Part of a list**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Slicing a List\n",
+    "players=['charlse', 'nartina', 'michael', 'florence', 'eli']\n",
+    "print(players[0:3]) # start to 3\n",
+    "print(players[1:4]) # 1 to 4\n",
+    "print(players[:4]) # start to 4\n",
+    "print(players[2:]) # 2 to end\n",
+    "print(players[-3:]) # 2 to end\n",
+    "print(\"-------------------------------\")\n",
+    "\n",
+    "#Looping through a slce\n",
+    "print(\"here are the first three players on my team:\")\n",
+    "for player in players[:3]: # setting limit to the loop\n",
+    "    print(player.title())\n",
+    "print(\"-------------------------------\")    \n",
+    "\n",
+    "# Copying a List\n",
+    "my_foods = [\"pizza\", \"falafet\", \"carrot cake\"]\n",
+    "friend_foods= my_foods[:] # means all ( copied one var to another)\n",
+    "\n",
+    "print(my_foods)\n",
+    "print(friend_foods)\n",
+    "\n",
+    "my_foods.append(\"cannoli\")\n",
+    "friend_foods.append(\"ice cream\")\n",
+    "print(my_foods)\n",
+    "print(friend_foods)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Tuples(cannot be modified or added)**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Defining a Tuple with paranthesis\n",
+    "dimentions = (200, 50)\n",
+    "print(dimentions[0])\n",
+    "print(dimentions[1])\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Try to change tuple\n",
+    "dimentions=(200,50,60)\n",
+    "dimentions[2]=500"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Looping Trhough All Values in a Tuple\n",
+    "dimentions=(200,50,60)\n",
+    "for dim in dimentions:\n",
+    "    print(dim)\n",
+    "\n",
+    "#Writing over a Tuple\n",
+    "dimentions=(200,50,60)\n",
+    "print(\"original dimentions\")\n",
+    "for dim in dimentions:\n",
+    "    print(dim)\n",
+    "    \n",
+    "# Only way to change tuple by overwrting    \n",
+    "dimentions=(400,100,500)\n",
+    "print(\"\\n Modified dimentions\")\n",
+    "for dim in dimentions:\n",
+    "    print(dim)    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Styling Your Code**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# the Style Guide\n",
+    "\"PEP 8  writing style\"\n",
+    "#indentation\n",
+    "\"Tab should be configured to 4 spaces in text editor\"\n",
+    "\n",
+    "#Line Length\n",
+    "\"Each line should be less than 80 characters\"\n",
+    "\"Text editors can be configured to set char limits\"\n",
+    "\n",
+    "#Blank Lines\n",
+    "\"Use blank lines to seperate/.group your code\"\n",
+    "\n",
+    "#Other Style Guidelines.\n",
+    "\"Read PEP 8 style guide\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
